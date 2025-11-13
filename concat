@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+messages = []
+
+Dir.glob('TEXT/**/*.txt') do |filepath|
+  puts "------------------------------------------------------------------"
+  puts filepath
+  puts "------------------------------------------------------------------"
+  puts ''
+  File.foreach(filepath) do |line|
+    puts line.chomp
+  end
+  puts ''
+end
